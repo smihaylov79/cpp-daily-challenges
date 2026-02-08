@@ -7,4 +7,7 @@ add_executable(cpp_daily_challenges
         solutions/easy/task01.cpp
         solutions/easy/task02.cpp
         solutions/hackerrank/inputoutput_task01.cpp
+        solutions/easy/task03.cpp
+        solutions/easy/task04.cpp
+        solutions/easy/task05.cpp
 )
