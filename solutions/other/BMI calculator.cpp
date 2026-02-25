@@ -3,7 +3,7 @@ using namespace std;
 
 void calculateBMI()
 {
-    system("clear");
+    system("cls");
 
     double weight;
     double height;
@@ -35,7 +35,7 @@ void calculateBMI()
 
 void instructions()
 {
-    system("clear");
+    system("cls");
     cout << "Instructions";
     cout << "\n----------------------";
     cout << "\n BMI is less then 18.5 : You are Underweight";
@@ -49,7 +49,7 @@ int main()
 {
     do
     {
-        system("clear");
+        system("cls");
         cout << " ----------------------------- " << endl;
         cout << " |       BMI Calculator       | " << endl;
         cout << " ------------------------------ " << endl;
