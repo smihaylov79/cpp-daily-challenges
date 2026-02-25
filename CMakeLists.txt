@@ -10,4 +10,15 @@ add_executable(cpp_daily_challenges
         solutions/easy/task03.cpp
         solutions/easy/task04.cpp
         solutions/easy/task05.cpp
+        solutions/easy/task06.cpp
+        "solutions/other/BMI calculator.cpp"
+        solutions/easy/task07.cpp
+        solutions/easy/task07p2.cpp
+        solutions/easy/task08.cpp
+        solutions/easy/task09.cpp
+        solutions/easy/task10.cpp
+        solutions/easy/task0.1.cpp
+        solutions/easy/task0.2.cpp
+        solutions/easy/task0.3.cpp
+        solutions/easy/task0.4.cpp
 )

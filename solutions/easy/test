@@ -1,0 +1,13 @@
+Task 10 — File Reader
+
+Write a program that:
+Reads a filename
+Opens the file
+Prints its contents line by line
+Requirements
+Use std::ifstream
+Handle file‑not‑found errors
+Bonus
+Count lines
+Count words
+Count characters
