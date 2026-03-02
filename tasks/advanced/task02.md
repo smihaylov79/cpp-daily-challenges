@@ -1,0 +1,1 @@
+English Resume for a text file using file reader with task 10 it reads the file, and then it makes it a resume from the essay of the 100 pages.

@@ -17,8 +17,15 @@ add_executable(cpp_daily_challenges
         solutions/easy/task08.cpp
         solutions/easy/task09.cpp
         solutions/easy/task10.cpp
-        solutions/easy/task0.1.cpp
-        solutions/easy/task0.2.cpp
-        solutions/easy/task0.3.cpp
-        solutions/easy/task0.4.cpp
+        solutions/easy/task11.cpp
+        solutions/easy/task12.cpp
+        solutions/easy/task12.2.cpp
+        solutions/easy/task13.cpp
+        "solutions/easy/task 14.cpp"
+        solutions/easy/task15.cpp
+        solutions/easy/task16.cpp
+        solutions/easy/task17.cpp
+        solutions/easy/task18.cpp
+        solutions/easy/task19.cpp
+        solutions/easy/task20.cpp
 )
