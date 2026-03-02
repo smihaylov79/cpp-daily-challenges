@@ -1,4 +1,6 @@
 #include <iostream>
+#include <limits>
+
 using namespace std;
 
 unsigned long long factorial_recursive(int n)
@@ -13,7 +15,7 @@ unsigned long long factorial_recursive(int n)
 
     if (temp > numeric_limits<unsigned long long>::max() / n)
     {
-        cout << "Overflow detected!" << endl;
+        cout << "\n⚠ Overflow detected! The result is too large for unsigned long long.\n";
         return 0;
     }
 
@@ -22,18 +24,38 @@ unsigned long long factorial_recursive(int n)
 
 int main()
 {
+    cout << "=============================\n";
+    cout << "      Factorial Calculator\n";
+    cout << "=============================\n\n";
+
+    cout << "Enter a non-negative integer (0 or greater): ";
+
     int n;
-    cin >> n;
+
+    if (!(cin >> n))
+    {
+        cout << "\n❌ Invalid input! Please enter a whole number.\n";
+        return 0;
+    }
 
     if (n < 0)
     {
-        cout << "Factorial is not defined for negative numbers." << endl;
+        cout << "\n❌ Factorial is not defined for negative numbers.\n";
         return 0;
+    }
+
+    if (n > 20)
+    {
+        cout << "\n⚠ Warning: Values greater than 20 will cause overflow for unsigned long long.\n";
     }
 
     unsigned long long result = factorial_recursive(n);
 
     if (result != 0)
-        cout << result << endl;
+    {
+        cout << "\n✅ " << n << "! = " << result << endl;
+    }
+
+    cout << "\nProgram finished successfully.\n";
     return 0;
 }

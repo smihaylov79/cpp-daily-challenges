@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+
 using namespace std;
 
 unsigned long long factorial_iterative(int n)
@@ -13,11 +14,11 @@ unsigned long long factorial_iterative(int n)
     {
         if (result > numeric_limits<unsigned long long>::max() / i)
         {
-            cout << "Overflow detected!" << endl;
+            cout << "\n⚠ Overflow detected! The result is too large for unsigned long long.\n";
             return 0;
         }
 
-        result += i;
+        result *= i;  // Corrected: multiplication
     }
 
     return result;
@@ -25,18 +26,38 @@ unsigned long long factorial_iterative(int n)
 
 int main()
 {
-    int n;
-    cin >> n;
+    cout << "=============================\n";
+    cout << "   Iterative Factorial Tool\n";
+    cout << "=============================\n\n";
 
-    if (n < 0)
+    cout << "Enter a non-negative integer (0 or greater): ";
+
+    int n;
+
+    if (!(cin >> n))
     {
-        cout << "Factorial is not defined for negative numbers." << endl;
+        cout << "\n❌ Invalid input! Please enter a whole number.\n";
         return 0;
     }
 
-    unsigned long long result = factorial_iterative(n);
-    if (result != 0)
-        cout << result << endl;
+    if (n < 0)
+    {
+        cout << "\n❌ Factorial is not defined for negative numbers.\n";
+        return 0;
+    }
 
+    if (n > 20)
+    {
+        cout << "\n⚠ Warning: Values greater than 20 will cause overflow for unsigned long long.\n";
+    }
+
+    unsigned long long result = factorial_iterative(n);
+
+    if (result != 0)
+    {
+        cout << "\n✅ " << n << "! = " << result << endl;
+    }
+
+    cout << "\nProgram finished successfully.\n";
     return 0;
 }

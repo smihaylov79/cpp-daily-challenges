@@ -1,4 +1,8 @@
 #include <iostream>
+#include <sstream>
+#include <limits>
+#include <cctype>
+#include <iomanip>
 using namespace std;
 
 double toCelsiusFromF(double f)
@@ -16,25 +20,42 @@ double toFahrenheitFromC(double c)
     return c * 9.0 / 5.0 + 32;
 }
 
-double toKelvinFromC (double c)
+double toKelvinFromC(double c)
 {
     return c + 273.15;
 }
 
 int main()
 {
-    double temperature;
-    char unit;
+    cout << "=====================================\n";
+    cout << "     Temperature Converter Program   \n";
+    cout << "=====================================\n";
+    cout << "Example input: 25 c\n";
+    cout << "Type x to exit.\n";
 
     while (true)
     {
-        cout << "\nEnter temperature and unit (c/f/k) or x to exit: ";
-        cin >> temperature >> unit;
+        cout << "\nEnter temperature and unit: ";
 
-        if (unit == 'x')
+        string input;
+        getline(cin, input);
+
+        if (input == "x" || input == "X")
             break;
 
-        double c, f, k;
+        stringstream ss(input);
+        double temperature;
+        char unit;
+
+        if (!(ss >> temperature >> unit))
+        {
+            cout << "Invalid input. Please enter like: 25 c\n";
+            continue;
+        }
+
+        unit = tolower(unit);
+
+        double c = 0, f = 0, k = 0;
 
         if (unit == 'c')
         {
@@ -44,8 +65,8 @@ int main()
         }
         else if (unit == 'f')
         {
-            c = toCelsiusFromF(temperature);
             f = temperature;
+            c = toCelsiusFromF(f);
             k = toKelvinFromC(c);
         }
         else if (unit == 'k')
@@ -55,13 +76,24 @@ int main()
                 cout << "Invalid: Kelvin cannot be negative.\n";
                 continue;
             }
+
+            k = temperature;
+            c = toCelsiusFromK(k);
+            f = toFahrenheitFromC(c);
         }
-        cout << "Celsius: " << c << endl;
-        cout << "Fahrenheit: " << f << endl;
-        cout << "Kelvin: " << k << endl;
+        else
+        {
+            cout << "Unknown unit. Use c, f, or k.\n";
+            continue;
+        }
+
+        cout << fixed << setprecision(2);
+        cout << "\nConverted Temperatures:\n";
+        cout << "Celsius:    " << c << " °C\n";
+        cout << "Fahrenheit: " << f << " °F\n";
+        cout << "Kelvin:     " << k << " K\n";
     }
 
-    cout << "Program exited.\n";
-
+    cout << "\nProgram exited safely.\n";
     return 0;
 }
