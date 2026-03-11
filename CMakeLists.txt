@@ -28,4 +28,7 @@ add_executable(cpp_daily_challenges
         solutions/easy/task18.cpp
         solutions/easy/task19.cpp
         solutions/easy/task20.cpp
+        solutions/easy/task21.cpp
+        solutions/easy/task1.cpp
+        solutions/easy/task2.cpp
 )

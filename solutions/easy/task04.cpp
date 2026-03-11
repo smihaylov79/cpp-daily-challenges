@@ -9,7 +9,7 @@ int main()
 
     cout << "Enter first number: " << endl;
     cin >> a;
-    cout << "Enter Opration: " << endl;
+    cout << "Enter Operation: " << endl;
     cin >> op;
     cout << "Enter second number: " << endl;
     cin >> b;
