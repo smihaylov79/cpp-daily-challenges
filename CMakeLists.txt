@@ -31,4 +31,10 @@ add_executable(cpp_daily_challenges
         solutions/easy/task21.cpp
         solutions/easy/task1.cpp
         solutions/easy/task2.cpp
+        solutions/easy/task1.1.cpp
+        "solutions/easy/tasks1.cpp"
+        solutions/easy/task2.1.cpp
+        solutions/easy/task3.1.cpp
+        solutions/easy/tasks3.cpp
+        solutions/easy/task4.1.cpp
 )
