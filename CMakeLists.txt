@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 20)
 add_executable(cpp_daily_challenges
         solutions/easy/task01.cpp
         solutions/easy/task02.cpp
-        solutions/hackerrank/inputoutput_task01.cpp
+        solutions/hackerrank/inputoutput01.cpp
         solutions/easy/task03.cpp
         solutions/easy/task04.cpp
         solutions/easy/task05.cpp
@@ -37,4 +37,6 @@ add_executable(cpp_daily_challenges
         solutions/easy/task3.1.cpp
         solutions/easy/tasks3.cpp
         solutions/easy/task4.1.cpp
+        solutions/hackerrank/forloop02.cpp
+        solutions/hackerrank/condtionalstatments03.cpp
 )
