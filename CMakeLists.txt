@@ -39,4 +39,6 @@ add_executable(cpp_daily_challenges
         solutions/easy/task4.1.cpp
         solutions/hackerrank/forloop02.cpp
         solutions/hackerrank/condtionalstatments03.cpp
+        solutions/hackerrank/Forloop.cpp
+        solutions/hackerrank/Functions.cpp
 )
